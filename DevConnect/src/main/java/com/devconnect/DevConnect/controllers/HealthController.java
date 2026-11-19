@@ -1,4 +1,4 @@
-package com.devconnect.DevConnect.controller;
+package com.devconnect.DevConnect.controllers;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -11,13 +11,13 @@ public class HealthController {
     
     // GET /health
     @GetMapping("/health")
-    public String getHealth() {
-        return "SpringBoot Application running Healthy";
+    public String health() {
+        return "DevConnect Backend is LIVE and HEALTHY";
     }
 
     // GET /api/v1/status
     @GetMapping("/api/v1/status") 
-    public Map<String, Object> getStatus() {
+    public Map<String, Object> status() {
         Map<String, Object> map = new HashMap<>();
         map.put("status", "OK");
         map.put("service" ,"DevConnect");
